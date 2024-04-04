@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #1d4717;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 42px;
+    margim-top: -8px;
+}
+
+.wrapper-tabela {
+    width: 50%; /* ajuste conforme necessário */
+    margin: 20 px auto 0;
+    background-color: white;
+    padding:  30px 30px; /* espaçamento interno */
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: -1px 1px 6px #DCDCDC;
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+}
+
+.thActions {
+    padding-left: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.titulos {
+    background: #DCDCDC;
+}
+
+.iconEdit {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.iconDelete {
+    width: 26px;
+    height: 26px;
+}

@@ -86,3 +86,25 @@ body {
     font-weight: 500;
     color: #fff;
 }
+
+.button-table button {
+    width: 4%;
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    padding: 0.26rem;
+    border: none;
+    background-color: #3faa32;
+    border-radius: 4px;
+}
+
+.button-table button:hover {
+    background-color: #5dc460;
+}
+
+.button-table button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}

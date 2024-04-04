@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="./index.js"></script>
     <title>Cadastro Aluno</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <div class="button-table">
+        <button><a href="usuarios.html">Usuários</a> </button>
+    </div>
+
     <div class="form">
         <form action="#">
             <div class="form-header">
@@ -66,26 +69,17 @@
             </div>
 
             <div class="continue-button" onclick="adicionarUsuario()">
-                <button><a href="#">Continuar</a> </button>
+                <button><a>Continuar</a></button>
             </div>
+
+            <input type="hidden" id="user-id" value="">
         </form>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyB5yN8aSHdWMXLPghJhKj81U_r-NqXI61o",
-            authDomain: "sitepersonal-32eb9.firebaseapp.com",
-            projectId: "sitepersonal-32eb9",
-            storageBucket: "sitepersonal-32eb9.appspot.com",
-            messagingSenderId: "140124961554",
-            appId: "1:140124961554:web:8cff7d3d2258ecf04d51cb"
-        };
-        firebase.initializeApp(firebaseConfig)
-    </script>
-    <script src="./assets/js/home.js"></script>
 
-
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

@@ -4,28 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários</title>
+    <title>Clientes</title>
     <link rel="stylesheet" type="text/css" href="assets/css/usuario.css">
 </head>
 
 <body>
+    <div class="nav">
+        <h1>Controle de Clientes</h1>
+    </div>
 
-    <div class="wrapper-tabela" id="tabela">
-        <table id="tabela-clientes">
-            <h1>Controle de usuários</h1>
-            <thead>
-                <tr class="titulos">
-                    <th>Nome completo</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th class="thActions">Ações</th>
-                </tr>
-            </thead>
-            <tbody id='usuarios'>
-                              
-            </tbody>
+    <div class="botoes">
+        <button>+ Adicionar</button>
+        <button><img src="assets/img/filter.png" alt="Filtrar">Filtrar</button>
+        <button><img src="assets/img/search.png" alt="Buscar">Buscar Clientes</button>
+    </div>
+
+    <div class="tabela">
+        <table>
+            <tr>
+                <th>Cliente</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
+                            width="18">
+                    </button>
+                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
+                            height="18" width="18">
+                    </button>
+                </td>
+            </tr>
         </table>
     </div>
+
 
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>

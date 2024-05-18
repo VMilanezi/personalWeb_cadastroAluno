@@ -5,61 +5,120 @@
     font-family: sans-serif;
 }
 
-body {
-    height: 100vh;
-    background-color: #1d4717;
-    margin: 0;
-    display: flex;
+.nav {
+    background-color: #3DA929;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 60px;
+  }
+
+.tabela {
     justify-content: center;
     align-items: center;
-}
-
-h1 {
-    margin-bottom: 42px;
-    margim-top: -8px;
-}
-
-.wrapper-tabela {
-    width: 50%; /* ajuste conforme necessário */
-    margin: 20 px auto 0;
-    background-color: white;
-    padding:  30px 30px; /* espaçamento interno */
-    border-radius: 10px;
+    margin: 0;
 }
 
 table {
-    width: 100%;
+    margin: auto;
+    width: 80%;
     border-collapse: collapse;
-    box-shadow: -1px 1px 6px #DCDCDC;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #666;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+  }
+
+th, td {
+  border: 1px solid black;
+  color: white;
+  background-color: #CFCFCF;
+  padding: 10px;
+  text-align: center;
+  height: 50px;
 }
 
 th {
-    padding: 10px;
-    text-align: left;
+    vertical-align: bottom;
 }
 
-.thActions {
-    padding-left: 12px;
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
 }
 
-td {
-    padding: 10px;
-    text-align: left;
-    border-top: 1px solid #D3D3D3;
-    border-bottom: 1px solid #D3D3D3;
+table tr:first-child th:first-child {
+    border-top-left-radius: 15px;
 }
 
-.titulos {
-    background: #DCDCDC;
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
 }
 
-.iconEdit {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+table tr:first-child th:last-child {
+    border-top-right-radius: 15px;
 }
 
-.iconDelete {
-    width: 26px;
-    height: 26px;
+.botoes {
+    text-align: right;
+    margin-bottom: 30px;
+    padding-right: 190px;
 }
+
+.botoes button {
+    margin-left: 50px;
+    background-color: #419532;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 24px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.botoes button img {
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+}
+
+.botoes button:hover {
+    background-color: darkgreen;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 30%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 30%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 30%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 10%;
+}
+
+table button {
+    border: none;
+    margin-top: 6px;
+    background-color: #CFCFCF;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+table button img {
+    width: 19px;
+    height: 19px;
+}
+
+table button:last-child {
+    margin-left: 8px;
+}
+

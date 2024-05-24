@@ -21,7 +21,6 @@
                 </div>
             </div>
 
-
             <div class="input-group">
                 <div class="input-box">
                     <label for="firstname">Nome completo</label>
@@ -49,7 +48,6 @@
                 </div>
             </div>
 
-
             <div class="gender-inputs">
                 <div class="gender-title">
                     <h6>Gênero</h6>
@@ -57,29 +55,43 @@
 
                 <div class="gender-group">
                     <div class="gender-input">
-                        <input id="female" type="radio" name="gender">
+                        <input id="female" type="radio" name="gender" value="Feminino">
                         <label for="female">Feminino</label>
                     </div>
 
                     <div class="gender-input">
-                        <input id="male" type="radio" name="gender">
+                        <input id="male" type="radio" name="gender" value="Masculino">
                         <label for="male">Masculino</label>
                     </div>
                 </div>
             </div>
 
-            <div class="continue-button" onclick="adicionarUsuario()">
-                <button><a>Continuar</a></button>
+            <div class="continue-button">
+                <button id="cadastrar" type="button">Continuar</button>
             </div>
 
             <input type="hidden" id="user-id" value="">
         </form>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDjAN0rzayQlsZzVByb5YHzK1Xccx3iI9c",
+            authDomain: "personal-d8e69.firebaseapp.com",
+            projectId: "personal-d8e69",
+            storageBucket: "personal-d8e69.appspot.com",
+            messagingSenderId: "859788133076",
+            appId: "1:859788133076:web:d66549ce0ccb5a50cf3141",
+            measurementId: "G-YBL6P4SEE7"
+        };
 
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+        firebase.initializeApp(firebaseConfig)
+    </script>
 
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/index.js">
+       
+    </script>
 </body>
 
 </html>

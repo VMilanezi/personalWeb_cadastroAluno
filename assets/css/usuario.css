@@ -1,124 +1,317 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+#index{
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  background-color: #3DA929;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
-.nav {
-    background-color: #3DA929;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 60px;
-  }
-
 .tabela {
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 table {
-    margin: auto;
-    width: 80%;
-    border-collapse: collapse;
-    border-style: hidden;
-    box-shadow: 0 0 0 1px #666;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
-  }
+  margin: auto;
+  width: 80%;
+  border-collapse: collapse;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #666;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+}
 
 th, td {
-  border: 1px solid black;
-  color: white;
-  background-color: #CFCFCF;
-  padding: 10px;
-  text-align: center;
-  height: 50px;
+border: 1px solid black;
+color: white;
+background-color: #CFCFCF;
+padding: 10px;
+text-align: center;
+height: 50px;
 }
 
 th {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 table tr:last-child td:first-child {
-    border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 table tr:first-child th:first-child {
-    border-top-left-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 table tr:last-child td:last-child {
-    border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 table tr:first-child th:last-child {
-    border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .botoes {
-    text-align: right;
-    margin-bottom: 30px;
-    padding-right: 190px;
+  text-align: right;
+  margin-bottom: 40px;
+  padding-right: 190px;
+  padding-top: 30px;
 }
 
 .botoes button {
-    margin-left: 50px;
-    background-color: #419532;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 15px 24px;
-    font-size: 15px;
-    display: inline-flex;
-    align-items: center;
-    vertical-align: middle;
-    cursor: pointer;
+  margin-left: 50px;
+  background-color: #419532;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 24px;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .botoes button img {
-    margin-right: 6px;
-    width: 18px;
-    height: 18px;
+  margin-right: 6px;
+  width: 18px;
+  height: 18px;
 }
 
 .botoes button:hover {
-    background-color: darkgreen;
+  background-color: darkgreen;
 }
 
 th:nth-child(1), td:nth-child(1) {
-    width: 30%;
+  width: 30%;
 }
 
 th:nth-child(2), td:nth-child(2) {
-    width: 30%;
+  width: 30%;
 }
 
 th:nth-child(3), td:nth-child(3) {
-    width: 30%;
+  width: 30%;
 }
 
 th:nth-child(4), td:nth-child(4) {
-    width: 10%;
+  width: 10%;
 }
 
 table button {
-    border: none;
-    margin-top: 6px;
-    background-color: #CFCFCF;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
+  border: none;
+  margin-top: 6px;
+  background-color: #CFCFCF;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
 }
 
 table button img {
-    width: 19px;
-    height: 19px;
+  width: 19px;
+  height: 19px;
 }
 
 table button:last-child {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 10% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 600px;
+border-radius: 10px;
+position: relative;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.form {
+margin-top: 20px;
+}
+
+.form-header {
+text-align: center;
+}
+
+.title {
+margin-bottom: 20px;
+}
+
+.input-group {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.input-box {
+flex: 1;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+input {
+width: 100%;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+.continue-button {
+text-align: center;
+}
+
+button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #369925;
+}
+
+
+/* Sidebar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 93.1vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #3DA929;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: #369925;
+    border-left: 3px solid #3b7ddd;
+}

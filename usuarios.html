@@ -1,169 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" type="text/css" href="assets/css/usuario.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 </head>
-
 <body>
     <div class="nav">
-        <h1>Controle de Clientes</h1>
+        <h1>Controle de Usuários</h1>
     </div>
 
-    <div class="botoes">
-        <button>+ Adicionar</button>
-        <button><img src="assets/img/filter.png" alt="Filtrar">Filtrar</button>
-        <button><img src="assets/img/search.png" alt="Buscar">Buscar Clientes</button>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Controle de usuários</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-pulse"></i>
+                        <span>Cadastro de exercícios</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-popup"></i>
+                        <span>Notificações</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-cog"></i>
+                        <span>Configurações</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="main p-3">
+            <div class="botoes">
+                <button ><a id="index" href="./index.html">+ Adicionar</a></button>
+                <button><img src="assets/img/filter.png" alt="Filtrar">Filtrar</button>
+                <button><img src="assets/img/search.png" alt="Buscar">Buscar Usuarios</button>
+            </div>
+        
+            <div class="tabela">
+                <table>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </table>
+            </div>
+        
+            <!-- Modal de Edição -->
+            <div id="editModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="form">
+                        <form id="editForm" action="#">
+                            <div class="form-header">
+                                <div class="title">
+                                    <h1>Editar Usuarios</h1>
+                                </div>
+                            </div>
+                        
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="fullname">Nome completo</label>
+                                    <input id="fullname" type="text" name="fullname" placeholder="" required>
+                                </div>
+                        
+                                <div class="input-box">
+                                    <label for="email">E-mail</label>
+                                    <input id="email" type="email" name="email" placeholder="" required>
+                                </div>
+                        
+                                <div class="input-box">
+                                    <label for="number">Telefone</label>
+                                    <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" maxlength="13" required>
+                                </div>
+                            </div>
+                        
+                            <div class="continue-button">
+                                <button id="cadastrar" type="button">Salvar</button>
+                            </div>
+                        
+                            <input type="hidden" id="user-id" value="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="tabela">
-        <table>
-            <tr>
-                <th>Cliente</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Ações</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="editIcon()"><img src="assets/img/edit.png" alt="Descrição da imagem" height="18"
-                            width="18">
-                    </button>
-                    <button onclick="deleteIcon()"><img src="assets/img/delete.png" alt="Descrição da imagem"
-                            height="18" width="18">
-                    </button>
-                </td>
-            </tr>
-        </table>
-    </div>
-
+    
 
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-    <script src="./assets/js/index.js"></script>
-</body>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDjAN0rzayQlsZzVByb5YHzK1Xccx3iI9c",
+            authDomain: "personal-d8e69.firebaseapp.com",
+            projectId: "personal-d8e69",
+            storageBucket: "personal-d8e69.appspot.com",
+            messagingSenderId: "859788133076",
+            appId: "1:859788133076:web:d66549ce0ccb5a50cf3141",
+            measurementId: "G-YBL6P4SEE7"
+        };
 
+        firebase.initializeApp(firebaseConfig)
+    </script>
+    <script src="./assets/js/usuarios.js"></script>
+</body>
 </html>
